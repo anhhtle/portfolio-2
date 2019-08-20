@@ -1,6 +1,6 @@
 <template>
   <div id="SectionThree" class="section-container">
-    <h3 class="section-header">Chose your Coder</h3>
+    <h3 class="section-header">Choose your Coder</h3>
 
     <div class="row">
       <div class="col-sm-6">
@@ -9,7 +9,7 @@
             <img v-if="!mouseover" src="../../assets/images/dino-1.png" />
             <img v-else src="../../assets/images/dino-2.png"/>
           </div>
-          <span class="primary-color">Anh</span> of house <span class="primary-color">Le</span>, first of his name, master of nap and watcher of sports, cleaner of code,  user of Google searches, browser of Stackoverflow and reddit.
+          <span class="primary-color">Anh</span> of house <span class="primary-color">Le</span>, first of his name, maester of nap and watcher of sports, cleaner of code,  user of Google searches, browser of Stackoverflow and youtube.
           
           <p><span class="primary-color">House banner:</span> The mouse <i class="fas fa-mouse-pointer"></i></p>
           <p><span class="primary-color">House word:</span> deadlines are coming</p>
@@ -28,7 +28,6 @@
 
 <script>
 import RadarChart from '../chart/RadarChart';
-import { setTimeout } from 'timers';
 
 export default {
   components: {
@@ -95,10 +94,6 @@ export default {
     .img-border
       float: left;
       margin-right: 20px;
-      border: 5px solid #fff;
-      box-shadow: 10px 10px 0 rgba(0,0,0,.75);
-      width: fit-content;
-      height: fit-content;
       img
         width: 200px;
         height: 200px;
