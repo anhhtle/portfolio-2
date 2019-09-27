@@ -1,6 +1,6 @@
 <template>
   <div id="SectionThree" class="section-container">
-    <h3 class="section-header">Choose your Coder</h3>
+    <h3 class="section-header">{{header}}</h3>
 
     <div class="row">
       <div class="col-sm-6">
@@ -28,6 +28,7 @@
 
 <script>
 import RadarChart from '../chart/RadarChart';
+import { setTimeout } from 'timers';
 
 export default {
   components: {
@@ -35,6 +36,8 @@ export default {
   },
   data() {
     return {
+      header: '!HGHF^#@ Y$). ?UX%',
+
       mouseover: false,
 
       // chart
@@ -53,21 +56,76 @@ export default {
 
       // meta
       element_height: 0,
+      element_visible: false,
     }
   },
   watch: {
     element_height (val) {
-      if (val <= 400 && !this.update_chart) {
+      if (val <= 800 && !this.update_chart) {
+        this.element_visible = true;
+      }
+    },
+    element_visible (val) {
+      if (val) {
+        // header
+        this.decodeHeader();
+
+        // graph
         this.radar_dataset[0].data = [7,7,9,8,6,7];
         this.update_chart = true;
       }
-    },
+    }
   },
   methods: {
     handleScroll() {
       let element =  document.getElementById('SectionThree');
       let rect = element.getBoundingClientRect();
       this.element_height = rect.top;
+    },
+    decodeHeader() {
+      this.header = 'C$@SDV :}vC )#LF';
+      setTimeout(() => {
+        this.header = 'CH+4Zh QV>< *HNQ$';
+      }, 100);
+      setTimeout(() => {
+        this.header = 'CHO4ne 8cse as39%';
+      }, 200);
+      setTimeout(() => {
+        this.header = 'CHOO]Z MBI? !9%c3';
+      }, 300);
+      setTimeout(() => {
+        this.header = 'CHOOSh 6ol zz4my';
+      }, 400);
+      setTimeout(() => {
+        this.header = 'CHOOSE vlo6 &2sdo';
+      }, 500);
+      setTimeout(() => {
+        this.header = 'CHOOSE Y=7+ GC3t1';
+      }, 600);
+      setTimeout(() => {
+        this.header = 'CHOOSE YO11 &0ytn';
+      }, 700);
+      setTimeout(() => {
+        this.header = 'CHOOSE YOUh .39~"h';
+      }, 800);
+      setTimeout(() => {
+        this.header = 'CHOOSE YOUR mvz|g3';
+      }, 900);
+      setTimeout(() => {
+        this.header = 'CHOOSE YOUR C2sdo';
+      }, 1000);
+      setTimeout(() => {
+        this.header = 'CHOOSE YOUR COv4$';
+      }, 1100);
+      setTimeout(() => {
+        this.header = 'CHOOSE YOUR CODk2';
+      }, 1200);
+      setTimeout(() => {
+        this.header = 'CHOOSE YOUR CODE/';
+      }, 1300);
+      setTimeout(() => {
+        this.header = 'CHOOSE YOUR CODER';
+      }, 1400);
     }
   },
   created () {
@@ -76,8 +134,6 @@ export default {
   destroyed () {
       window.removeEventListener('scroll', this.handleScroll);
   },
-  mounted() {
-  }
 }
 </script>
 

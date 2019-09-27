@@ -1,6 +1,6 @@
 <template>
   <div id="SectionFour" class="section-container">
-    <h3 class="section-header">Choose your stage</h3>
+    <h3 class="section-header">{{header}}</h3>
 
     <div class="row">
       <!-- stage img -->
@@ -46,12 +46,33 @@
 export default {
   data() {
     return {
+      header: 'awo3!c b643 -&c1k',
+
       stage: 'Stanford University',
       date: '2017 - Present',
-      description: '<span class="primary-color">Web Developer</span> for the Department of Medicine. Create website and web apps in support of faculty and staffs. Web apps ranges from financial reports, hiring portal, and operational systems. Full-stack skillsets with emphasis in JavaScript.'
+      description: '<span class="primary-color">Web Developer</span> for the Department of Medicine. Create website and web apps in support of faculty and staffs. Web apps ranges from financial reports, hiring portal, and operational systems. Full-stack skillsets with emphasis in JavaScript.',
+
+      // meta
+      element_height: 0,
+      element_visible: false,
     }
   },
   watch: {
+    element_height (val) {
+      if (val <= 800) {
+        this.element_visible = true;
+      }
+    },
+    element_visible (val) {
+      if (val) {
+        // header
+        this.decodeHeader();
+
+        // graph
+        this.radar_dataset[0].data = [7,7,9,8,6,7];
+        this.update_chart = true;
+      }
+    },
     stage (val) {
       if (val === 'Stanford University') {
         this.date = '2017 - Present';
@@ -67,7 +88,65 @@ export default {
         this.description = '<span class="primary-color">B.S. Biological Sciences</span> with a minor in Chemistry.';
       }
     }
-  }
+  },
+  methods: {
+    handleScroll() {
+      let element =  document.getElementById('SectionFour');
+      let rect = element.getBoundingClientRect();
+      this.element_height = rect.top;
+    },
+    decodeHeader() {
+      this.header = 'C$@SDV :}vC )#LF';
+      setTimeout(() => {
+        this.header = 'CH+4Zh QV>< *HNQ$';
+      }, 100);
+      setTimeout(() => {
+        this.header = 'CHO4ne 8cs! as39%';
+      }, 200);
+      setTimeout(() => {
+        this.header = 'CHOO]Z Mlb? !9%c3';
+      }, 300);
+      setTimeout(() => {
+        this.header = 'CHOOSh 5ol} a2mdy';
+      }, 400);
+      setTimeout(() => {
+        this.header = 'CHOOSE vlo6 &2sdo';
+      }, 500);
+      setTimeout(() => {
+        this.header = 'CHOOSE Y=7+ GC3t1';
+      }, 600);
+      setTimeout(() => {
+        this.header = 'CHOOSE YO11 &0ytn';
+      }, 700);
+      setTimeout(() => {
+        this.header = 'CHOOSE YOUh .39~"h';
+      }, 800);
+      setTimeout(() => {
+        this.header = 'CHOOSE YOUR mvz|g3';
+      }, 900);
+      setTimeout(() => {
+        this.header = 'CHOOSE YOUR Sxn5w';
+      }, 1000);
+      setTimeout(() => {
+        this.header = 'CHOOSE YOUR ST+3n';
+      }, 1100);
+      setTimeout(() => {
+        this.header = 'CHOOSE YOUR STAj4';
+      }, 1200);
+      setTimeout(() => {
+        this.header = 'CHOOSE YOUR STAG/';
+      }, 1300);
+      setTimeout(() => {
+        this.header = 'CHOOSE YOUR STAGE';
+      }, 1400);
+    }
+  },
+  created () {
+    window.addEventListener('scroll', this.handleScroll);
+  },
+  destroyed () {
+    window.removeEventListener('scroll', this.handleScroll);
+  },
 }
 </script>
 

@@ -8,6 +8,10 @@
     <SectionThree /> 
     <!-- choose your stage -->
     <SectionFour /> 
+    <!-- fight image -->
+    <SectionFive /> 
+    <!-- projects -->
+    <SectionSix /> 
   </div>
 </template>
 
@@ -16,10 +20,12 @@ import SectionOne from './SectionOne';
 import SectionTwo from './SectionTwo';
 import SectionThree from './SectionThree';
 import SectionFour from './SectionFour';
+import SectionFive from './SectionFive';
+import SectionSix from './SectionSix';
 
 export default {
   components: {
-    SectionOne, SectionTwo, SectionThree, SectionFour
+    SectionOne, SectionTwo, SectionThree, SectionFour, SectionFive, SectionSix
   }
 }
 </script>
