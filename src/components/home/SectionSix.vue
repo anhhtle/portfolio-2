@@ -1,22 +1,67 @@
 <template>
   <div id="SectionSix" class="section-container">
     <h3 class="section-header" style="margin-bottom:20px;">{{header}}</h3>
-    <p style="margin-bottom:64px;">Public facing projects</p>
+    <p style="margin-bottom:64px;">Professional and personal Projects</p>
 
-    <div class="flex">
-      <div class="w-1-3">
-        <div class="project-box">
-          <p>hi</p>
+    <div class="flex h-center">
+      <div class="col-sm-6 col-md-3">
+        <div class="project-box heavy-shadow">
+          <ul class="project-nav">
+            <li @click="$emit('showErrorModal')"><span class="color-red">f</span>ile</li>
+            <li @click="$emit('showErrorModal')"><span class="color-red">e</span>dit</li>
+            <li @click="$emit('showErrorModal')"><span class="color-red">g</span>raphics</li>
+            <li @click="$emit('showErrorModal')"><span class="color-red">q</span>uit</li>
+          </ul>
+          <p class="title">stanford hiring portal</p>
+          <div class="section primary-color-bg">public faculty hiring site. internal applicant management/interview/status system</div>
+          <div class="section tools">
+            <span>Tools: </span>
+            <font-awesome-icon class="font-awesome vuejs" :icon="[ 'fab', 'vuejs' ]" />
+            <font-awesome-icon class="font-awesome laravel" :icon="[ 'fab', 'laravel' ]" />
+            <font-awesome-icon class="font-awesome database" icon="database"/>
+          </div>
         </div>
       </div>
-      <div class="w-1-3">
-        <p>hi</p>
-      </div>
-      <div class="w-1-3">
-        <p>hi</p>
-      </div>
-    </div>
 
+      <div class="col-sm-6 col-md-3">
+        <div class="project-box heavy-shadow">
+          <ul class="project-nav">
+            <li><span class="color-red">f</span>ile</li>
+            <li><span class="color-red">e</span>dit</li>
+            <li><span class="color-red">g</span>raphics</li>
+            <li><span class="color-red">q</span>uit</li>
+          </ul>
+          <p class="title">stanford hiring portal</p>
+          <div class="section primary-color-bg">public faculty hiring site. internal applicant management/interview/status system</div>
+          <div class="section tools">
+            <span>Tools: </span>
+            <font-awesome-icon class="font-awesome vuejs" :icon="[ 'fab', 'vuejs' ]" />
+            <font-awesome-icon class="font-awesome laravel" :icon="[ 'fab', 'laravel' ]" />
+            <font-awesome-icon class="font-awesome database" icon="database"/>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm-6 col-md-3">
+        <div class="project-box heavy-shadow">
+          <ul class="project-nav">
+            <li><span class="color-red">f</span>ile</li>
+            <li><span class="color-red">e</span>dit</li>
+            <li><span class="color-red">g</span>raphics</li>
+            <li><span class="color-red">q</span>uit</li>
+          </ul>
+          <p class="title">stanford hiring portal</p>
+          <div class="section primary-color-bg">public faculty hiring site. internal applicant management/interview/status system</div>
+          <div class="section tools">
+            <span>Tools: </span>
+            <font-awesome-icon class="font-awesome vuejs" :icon="[ 'fab', 'vuejs' ]" />
+            <font-awesome-icon class="font-awesome laravel" :icon="[ 'fab', 'laravel' ]" />
+            <font-awesome-icon class="font-awesome database" icon="database"/>
+          </div>
+        </div>
+      </div>
+
+    </div>
   </div>
 </template>
 
@@ -87,11 +132,35 @@ export default {
 </script>
 
 <style lang="sass" scoped>
-#SectionSix
-  background: linear-gradient(180deg,#1a1514,#413561);
-.project-box
-  border: 4px solid #000;
-  color: #fff;
-  background-color: #0200af;
-  box-shadow: 10px 10px 0 rgba(0,0,0,.75);
+  #SectionSix
+    background: linear-gradient(180deg,#1a1514,#413561);
+  .project-box
+    border: 4px solid #000;
+    color: #fff;
+    background-color: #0200af;
+    .project-nav
+      display: flex;
+      background-color: #bbb;
+      list-style: none;
+      padding: 0 10px;
+      li
+        color: #000;
+        margin-right: 15px;
+        cursor: pointer;
+    .title
+      font-size: 2em;
+      line-height: 50px;
+      padding: 10px 15px;
+    .section
+      text-align: left;
+      padding: 10px 15px;
+    .tools
+      .font-awesome
+        margin: 0 10px;
+      .vuejs
+        color: #4fc08d;
+      .laravel
+        color: #ff2d20;
+      .database
+        color: #fff;
 </style>

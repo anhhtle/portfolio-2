@@ -67,10 +67,6 @@ export default {
       if (val) {
         // header
         this.decodeHeader();
-
-        // graph
-        this.radar_dataset[0].data = [7,7,9,8,6,7];
-        this.update_chart = true;
       }
     },
     stage (val) {
@@ -151,24 +147,23 @@ export default {
 </script>
 
 <style lang="sass" scoped>
-#SectionFour
-  background: linear-gradient(180deg,#413561,#3206b9);
-  .flex-container
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    .img-container
-      cursor: pointer;
-      margin: 10px;
-      img
-        width: 300px;
-        height: 170px;
-  .stage
-    font-size: 1.5em;
-    text-shadow: 5px 5px #000;
-    margin: 0;
-  .date
-    font-size: 1.3em;
-
+  #SectionFour
+    background: linear-gradient(180deg,#413561,#3206b9);
+    .flex-container
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      .img-container
+        cursor: pointer;
+        margin: 10px;
+        img
+          width: 300px;
+          height: 170px;
+    .stage
+      font-size: 1.5em;
+      text-shadow: 5px 5px #000;
+      margin: 0;
+    .date
+      font-size: 1.3em;
 </style>

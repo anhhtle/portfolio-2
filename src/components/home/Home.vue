@@ -11,7 +11,9 @@
     <!-- fight image -->
     <SectionFive /> 
     <!-- projects -->
-    <SectionSix /> 
+    <SectionSix @showErrorModal="show_error_modal = true;"/> 
+
+    <ErrorModal v-show="show_error_modal" @close="show_error_modal = false;"/>
   </div>
 </template>
 
@@ -22,10 +24,17 @@ import SectionThree from './SectionThree';
 import SectionFour from './SectionFour';
 import SectionFive from './SectionFive';
 import SectionSix from './SectionSix';
+import ErrorModal from '../utility/ErrorModal';
 
 export default {
   components: {
-    SectionOne, SectionTwo, SectionThree, SectionFour, SectionFive, SectionSix
+    SectionOne, SectionTwo, SectionThree, SectionFour, SectionFive, SectionSix,
+    ErrorModal
+  },
+  data() {
+    return {
+      show_error_modal: false,
+    }
   }
 }
 </script>
