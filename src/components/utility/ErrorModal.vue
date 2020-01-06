@@ -11,11 +11,6 @@
     </div>
 </template>
 
-<script>
-    method: {
-    }
-</script>
-
 <style lang="sass" scoped>
     .modal-mask 
         justify-content: center;
