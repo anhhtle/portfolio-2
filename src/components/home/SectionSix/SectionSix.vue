@@ -76,6 +76,7 @@ export default {
           status: 'Professional',
           title: 'stanford hiring portal',
           description: 'public faculty hiring site. internal applicant management/interview/status system',
+          site: 'https://facultyapplication.stanford.edu',
           skills: ['vuejs', 'laravel', 'database'],
           images: [
             {
