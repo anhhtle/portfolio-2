@@ -13,11 +13,11 @@
         :site="item.site"
         :images="item.images"
         @showErrorModal="$emit('showErrorModal')"
-        @showImage="handlehowLightbox(index)"
+        @showImage="showLightbox(index)"
       />
     </div>
 
-    <LightBox :images="projects[projectImageIndex].images" :show="show_lightbox" @close="handleCloseLightbox"/>
+    <LightBox :images="lightbox_images" :show="show_lightbox" @close="closeLightbox"/>
   
   </div>
 </template>
@@ -36,7 +36,42 @@ export default {
       element_height: 0,
       element_visible: false,
 
+      lightbox_images: [],
+
       projects: [
+        {
+          status: 'Professional',
+          title: 'stanford COVID Vaccine tracker',
+          description: 'track the development of vaccines and theraputics for COVID-19. Uses clinicaltrials.org, pubmed, and drugbank.ca.',
+          skills: ['vuejs', 'laravel', 'database'],
+          images: [
+            {
+              thumb: require('../../../assets/images/racetoacure-1.png'),
+              src: require('../../../assets/images/racetoacure-1.png'),
+              caption: '<h4>Overview</h4>',
+            },
+            {
+              thumb: require('../../../assets/images/racetoacure-2.png'),
+              src: require('../../../assets/images/racetoacure-2.png'),
+              caption: '<h4>Categorized data</h4>',
+            },
+          ]
+        },
+        {
+          status: 'Freelance',
+          title: 'abrahamverghese.org',
+          description: 'wordpress site for a best-selling author. Uses CDN and caching to optimize speed. SEO with plugin and Google Search Console.',
+          skills: ['wordpress'],
+          file: '',
+          site: 'https://abrahamverghese.org',
+          images: [
+            {
+              thumb: require('../../../assets/images/av-site.png'),
+              src: require('../../../assets/images/av-site.png'),
+              caption: '<h4>buy his books!</h4>',
+            },
+          ],
+        },
         {
           status: 'Professional',
           title: 'stanford hiring portal',
@@ -44,20 +79,15 @@ export default {
           skills: ['vuejs', 'laravel', 'database'],
           images: [
             {
-              thumb: require('../../../assets/images/fight.png'),
-              src: require('../../../assets/images/fight.png'),
+              thumb: require('../../../assets/images/domleanfa.png'),
+              src: require('../../../assets/images/domleanfa.png'),
               caption: '<h4>Fight!</h4>',
-            },
-            {
-              thumb: 'https://i-kinhdoanh.vnecdn.net/2018/06/18/1-1529296929_680x0.jpg',
-              src: 'https://i-kinhdoanh.vnecdn.net/2018/06/18/1-1529296929_680x0.jpg',
-              caption: '<h4>Messi</h4>',
             },
           ]
         },
         {
           status: 'Personal',
-          title: 'founding speeches',
+          title: 'founding speeches [not maintaining]',
           description: 'Easily browse and view transcript of famous speeches. Use Watson Personality Insight to analyze the transcript based on: Big Five personality, Needs, and Values',
           skills: ['react', 'database'],
           file: 'https://github.com/anhhtle/founding-speeches',
@@ -77,23 +107,7 @@ export default {
         },
         {
           status: 'Personal',
-          title: 'FRIEND ALERT',
-          description: 'SIGN-UP YOUR FRIENDS AS EMERGENCY CONTACTS. SET AN ALARM. YOUR CONTACTS WILL BE NOTIFIED WHEN THE TIMER EXPIRES.',
-          skills: ['js' ,'node-js', 'database'],
-          file: 'https://github.com/anhhtle/Friend-Alert',
-          site: 'https://friend-alert.herokuapp.com/',
-        },
-        {
-          status: 'Personal',
-          title: 'FRIEND ALERT',
-          description: 'SIGN-UP YOUR FRIENDS AS EMERGENCY CONTACTS. SET AN ALARM. YOUR CONTACTS WILL BE NOTIFIED WHEN THE TIMER EXPIRES.',
-          skills: ['js' ,'node-js', 'database'],
-          file: 'https://github.com/anhhtle/Friend-Alert',
-          site: 'https://friend-alert.herokuapp.com/',
-        },
-        {
-          status: 'Personal',
-          title: 'FRIEND ALERT',
+          title: 'FRIEND ALERT [not maintaining]',
           description: 'SIGN-UP YOUR FRIENDS AS EMERGENCY CONTACTS. SET AN ALARM. YOUR CONTACTS WILL BE NOTIFIED WHEN THE TIMER EXPIRES.',
           skills: ['js' ,'node-js', 'database'],
           file: 'https://github.com/anhhtle/Friend-Alert',
@@ -101,13 +115,12 @@ export default {
         },
       ],
 
-      projectImageIndex: 0,
+      projectImageIndex: null,
       show_lightbox: false
     }
   },
   watch: {
     element_height (val) {
-
       if (val <= 800) {
         this.element_visible = true;
       }
@@ -118,15 +131,15 @@ export default {
         this.decodeHeader();
       }
     },
+    projectImageIndex (val) {
+      if (val !== null) {
+        this.lightbox_images = this.projects[val].images;
+      } else {
+        this.lightbox_images = [];
+      }
+    },
   },
   methods: {
-    handlehowLightbox(index) {
-      this.projectImageIndex = index;
-      this.show_lightbox = true;
-    },
-    handleCloseLightbox() {
-      this.show_lightbox = false;
-    },
     handleScroll() {
       let element =  document.getElementById('SectionFour');
       let rect = element.getBoundingClientRect();
@@ -158,7 +171,15 @@ export default {
       setTimeout(() => {
         this.header = 'PROJECTS';
       }, 700);
-    }
+    },
+    showLightbox(index) {
+      this.projectImageIndex = index;
+      this.show_lightbox = true;
+    },
+    closeLightbox() {
+      this.show_lightbox = false;
+      this.projectImageIndex = null;
+    },
   },
   created () {
     window.addEventListener('scroll', this.handleScroll);
