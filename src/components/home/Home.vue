@@ -23,7 +23,7 @@ import SectionTwo from './SectionTwo';
 import SectionThree from './SectionThree';
 import SectionFour from './SectionFour';
 import SectionFive from './SectionFive';
-import SectionSix from './SectionSix';
+import SectionSix from './SectionSix/SectionSix';
 import ErrorModal from '../utility/ErrorModal';
 
 export default {
