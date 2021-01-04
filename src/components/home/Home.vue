@@ -48,6 +48,7 @@ export default {
 
 <style lang="sass" scoped>
   .contact-container
+    cursor: pointer;
     position: fixed;
     width: 100px;
     background: blue;

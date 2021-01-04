@@ -48,8 +48,8 @@
         border-right: 2px solid #fff;
         padding-left: 4px;
         padding-right: 4px;
-        width: 70px;
-        margin-left: -35px;
+        width: 100px;
+        margin-left: -50px;
         left: 50%;
         background-color: blue;
         font-size: 0.8em;
