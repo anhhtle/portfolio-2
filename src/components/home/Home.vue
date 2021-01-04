@@ -13,6 +13,11 @@
     <!-- projects -->
     <SectionSix @showErrorModal="show_error_modal = true;"/> 
 
+    <div class="contact-container" @click="show_contacts_modal = true;">
+      <p>Contacts</p>
+    </div>
+
+    <ContactsModal v-show="show_contacts_modal" @close="show_contacts_modal = false;"/>
     <ErrorModal v-show="show_error_modal" @close="show_error_modal = false;"/>
   </div>
 </template>
@@ -24,15 +29,17 @@ import SectionThree from './SectionThree';
 import SectionFour from './SectionFour';
 import SectionFive from './SectionFive';
 import SectionSix from './SectionSix/SectionSix';
+import ContactsModal from '../utility/ContactsModal';
 import ErrorModal from '../utility/ErrorModal';
 
 export default {
   components: {
     SectionOne, SectionTwo, SectionThree, SectionFour, SectionFive, SectionSix,
-    ErrorModal
+    ContactsModal, ErrorModal
   },
   data() {
     return {
+      show_contacts_modal: false,
       show_error_modal: false,
     }
   }
@@ -40,4 +47,12 @@ export default {
 </script>
 
 <style lang="sass" scoped>
+  .contact-container
+    position: fixed;
+    width: 100px;
+    background: blue;
+    right: 30px;
+    bottom: 20px;
+    p
+      margin-bottom: 0;
 </style>

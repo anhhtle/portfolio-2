@@ -2,16 +2,16 @@
   <div class="col-md-6 col-lg-4">
     <div class="project-box heavy-shadow">
       <ul class="project-nav">
-        <!-- file -->
-        <li v-if="file"><a target="_blank" :href="file"><span class="color-red">p</span>lay</a></li>
-        <li v-else @click="$emit('showErrorModal')" class="show-error-modal"><span class="color-red">P</span>lay</li>
+        <!-- github -->
+        <li v-if="github"><a target="_blank" :href="github"><span class="color-red">g</span>ithub</a></li>
+        <li v-else @click="$emit('showErrorModal')" class="show-error-modal"><span class="color-red">g</span>ithub</li>
 
         <!-- site -->
         <li v-if="site"><a target="_blank" :href="site"><span class="color-red">s</span>ite</a></li>
         <li v-else @click="$emit('showErrorModal')" class="show-error-modal"><span class="color-red">s</span>ite</li>
 
         <!-- graphic -->
-        <li v-if="images" @click="$emit('showImage')" ><span class="color-red">g</span>raphics</li>
+        <li v-if="images" @click="$emit('showImage')"><a><span class="color-red">g</span>raphics</a></li>
         <li v-else @click="$emit('showErrorModal')" class="show-error-modal"><span class="color-red">g</span>raphics</li>
 
 
@@ -35,7 +35,7 @@
 
 <script>
 export default {
-  props: ['title', 'description', 'skills', 'status', 'file', 'site', 'images'],
+  props: ['title', 'description', 'skills', 'status', 'github', 'site', 'images'],
   data() {
     return {
     }
@@ -66,6 +66,8 @@ export default {
         cursor: pointer;
         a
           color: #000;
+          &:hover 
+            text-decoration: underline;
     .status
       margin: 0;
     .title

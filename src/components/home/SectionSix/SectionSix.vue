@@ -9,7 +9,7 @@
         :description="item.description"
         :skills="item.skills"
         :status="item.status"
-        :file="item.file"
+        :github="item.github"
         :site="item.site"
         :images="item.images"
         @showErrorModal="$emit('showErrorModal')"
@@ -44,6 +44,7 @@ export default {
           title: 'stanford COVID Vaccine tracker',
           description: 'track the development of vaccines and theraputics for COVID-19. Uses clinicaltrials.org, pubmed, and drugbank.ca.',
           skills: ['vuejs', 'laravel', 'database'],
+          site: 'https://racetoacure.stanford.edu/',
           images: [
             {
               thumb: require('../../../assets/images/racetoacure-1.png'),
@@ -62,7 +63,7 @@ export default {
           title: 'abrahamverghese.org',
           description: 'wordpress site for a best-selling author. Uses CDN and caching to optimize speed. SEO with plugin and Google Search Console.',
           skills: ['wordpress'],
-          file: '',
+          github: '',
           site: 'https://abrahamverghese.org',
           images: [
             {
@@ -87,11 +88,17 @@ export default {
           ]
         },
         {
+          status: 'Professional',
+          title: 'stanford department of medicine site',
+          description: `Provide support and maintance for the largest department within the school of medicine. Also train new user in using the CMS; this site uses Adobe Experience Manager.`,
+          site: 'https://medicine.stanford.edu/',
+        },
+        {
           status: 'Personal',
           title: 'founding speeches [not maintaining]',
           description: 'Easily browse and view transcript of famous speeches. Use Watson Personality Insight to analyze the transcript based on: Big Five personality, Needs, and Values',
           skills: ['react', 'database'],
-          file: 'https://github.com/anhhtle/founding-speeches',
+          github: 'https://github.com/anhhtle/founding-speeches',
           site: 'https://founding-speeches.herokuapp.com/',
           images: [
             {
@@ -111,7 +118,7 @@ export default {
           title: 'FRIEND ALERT [not maintaining]',
           description: 'SIGN-UP YOUR FRIENDS AS EMERGENCY CONTACTS. SET AN ALARM. YOUR CONTACTS WILL BE NOTIFIED WHEN THE TIMER EXPIRES.',
           skills: ['js' ,'node-js', 'database'],
-          file: 'https://github.com/anhhtle/Friend-Alert',
+          github: 'https://github.com/anhhtle/Friend-Alert',
           site: 'https://friend-alert.herokuapp.com/',
         },
       ],
