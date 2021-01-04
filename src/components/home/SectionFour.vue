@@ -50,7 +50,7 @@ export default {
 
       stage: 'Stanford University',
       date: '2017 - Present',
-      description: '<span class="primary-color">Web Developer</span> for the Department of Medicine. Create website and web apps in support of faculty and staffs. Web apps ranges from financial reports, hiring portal, and operational systems. Full-stack skillsets with emphasis in JavaScript.',
+      description: '<span class="primary-color">Web Developer</span> for the Department of Medicine. Create websites and web apps in support of faculty and staffs. Web apps ranges from financial reports, hiring portal, and operational systems. Full-stack skillsets with emphasis in JavaScript.',
 
       // meta
       element_height: 0,
@@ -72,7 +72,7 @@ export default {
     stage (val) {
       if (val === 'Stanford University') {
         this.date = '2017 - Present';
-        this.description = '<span class="primary-color">Web Developer</span> for the Department of Medicine. Create website and web apps in support of faculty and staffs. Web apps ranges from financial reports, hiring portal, and operational systems. Full-stack skillsets with emphasis in JavaScript.';
+        this.description = '<span class="primary-color">Web Developer</span> for the Department of Medicine. Create websites and web apps in support of faculty and staffs. Web apps ranges from financial reports, hiring portal, and operational systems. Full-stack skillsets with emphasis in JavaScript.';
       } else if (val === 'BD Biosciences') {
         this.date = '2013 - 2017';
         this.description = '<span class="primary-color">Data Specialist</span>. Three plus years of increasing responsibility in a technical role, working on a customer centric, eCommerce web team. Responsible for maintaining the website’s catalog and provide supports for internal and external customers.';
