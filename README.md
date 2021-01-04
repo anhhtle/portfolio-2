@@ -1,6 +1,6 @@
 # portfolio-2
 
-anhhtle.github.io/portfolio-2
+https://ahtle.github.io/portfolio-2/
 
 ## Project setup
 ```
