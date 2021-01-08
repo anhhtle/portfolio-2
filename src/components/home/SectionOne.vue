@@ -9,8 +9,8 @@ export default {
 }
 </script>
 
-<style lang="sass" scoped>
-#SectionOne
+<style lang="scss" scoped>
+#SectionOne {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -19,14 +19,30 @@ export default {
   background-image: url(../../assets/images/sf-bg.png);
   background-size: cover;
   image-rendering: pixelated;
-
-.pulse
+}
+.pulse {
   animation: pulse infinite 4s ease-in-out;
-@keyframes pulse
+}
+@keyframes pulse {
   0% 
-    filter: contrast(1);
+    {filter: contrast(1);}
   60% 
-    filter: contrast(3);
+    {filter: contrast(3);}
   100%
-    filter: contrast(1);
+    {filter: contrast(1);}
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (max-width: 768px) {
+  .pulse {
+    width: 500px;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (max-width: 600px) {
+  .pulse {
+    width: 350px;
+  }
+}
 </style>

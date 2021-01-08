@@ -56,7 +56,7 @@ export default {
               src: require('../../../assets/images/racetoacure-2.png'),
               caption: '<h4>Categorized data</h4>',
             },
-          ]
+          ],
         },
         {
           status: 'Freelance',
@@ -92,34 +92,47 @@ export default {
           title: 'stanford department of medicine site',
           description: `Provide support and maintance for the largest department within the school of medicine. Also train new user in using the CMS; this site uses Adobe Experience Manager.`,
           site: 'https://medicine.stanford.edu/',
+          images: [
+            {
+              thumb: require('../../../assets/images/dom.png'),
+              src: require('../../../assets/images/dom.png'),
+              caption: '<h4>Homepage</h4>',
+            },
+          ]
         },
         {
           status: 'Personal',
           title: 'founding speeches [not maintaining]',
           description: 'Easily browse and view transcript of famous speeches. Use Watson Personality Insight to analyze the transcript based on: Big Five personality, Needs, and Values',
           skills: ['react', 'database'],
-          github: 'https://github.com/anhhtle/founding-speeches',
+          github: 'https://github.com/ahtle/founding-speeches',
           site: 'https://founding-speeches.herokuapp.com/',
           images: [
             {
-              thumb: 'https://dummyimage.com/1280/000000/ffffff',
-              src: 'https://dummyimage.com/1280/000000/ffffff',
-              caption: '<h4>Fight!</h4>',
+              thumb: 'https://github.com/ahtle/founding-speeches/raw/master/public/img/watson-screenshot.png',
+              src: 'https://github.com/ahtle/founding-speeches/raw/master/public/img/watson-screenshot.png',
+              caption: '<h4>IBM Watson analysis</h4>',
             },
             {
-              thumb: 'https://dummyimage.com/400/000000/ffffff',
-              src: 'https://dummyimage.com/400/000000/ffffff',
-              caption: '<h4>Messi</h4>',
+              thumb: 'https://github.com/ahtle/founding-speeches/raw/master/public/img/screenshot.jpg',
+              src: 'https://github.com/ahtle/founding-speeches/raw/master/public/img/screenshot.jpg',
+              caption: '<h4>Dashboard</h4>',
             },
           ]
         },
         {
-          status: 'Personal',
-          title: 'FRIEND ALERT [not maintaining]',
-          description: 'SIGN-UP YOUR FRIENDS AS EMERGENCY CONTACTS. SET AN ALARM. YOUR CONTACTS WILL BE NOTIFIED WHEN THE TIMER EXPIRES.',
-          skills: ['js' ,'node-js', 'database'],
-          github: 'https://github.com/anhhtle/Friend-Alert',
-          site: 'https://friend-alert.herokuapp.com/',
+          status: 'Professional',
+          title: 'Medical Calculators',
+          description: 'The calculators presented in these pages are created for healthcare providers who are familiar with the diagnosis and treatment of patients with liver disease.',
+          skills: ['vuejs'],
+          site: 'https://medcalculators.stanford.edu/meld',
+          images: [
+            {
+              thumb: require('../../../assets/images/medcalculator.png'),
+              src: require('../../../assets/images/medcalculator.png'),
+              caption: '<h4>Med calculator</h4>',
+            },
+          ]
         },
       ],
 

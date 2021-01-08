@@ -5,11 +5,16 @@
                 Error!
             </div>
             <div class="error-body flex">
-                <p>permission denied</p>
+                <p>private</p>
             </div>
         </div>
     </div>
 </template>
+
+<script>
+export default {
+}
+</script>
 
 <style lang="sass" scoped>
     .modal-mask 
