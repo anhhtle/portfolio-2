@@ -148,8 +148,6 @@ export default {
         i
             font-size: 0.8em;
         .img-border
-            border: 5px solid #fff;
-            box-shadow: 10px 10px 0 rgba(0,0,0,.75);
             float: left;
             margin-right: 20px;
             @media screen and (max-width: 575px)
@@ -157,6 +155,9 @@ export default {
                 display: flex;
                 justify-content: center;
                 margin-bottom: 20px;
+            img
+                border: 5px solid #fff;
+                box-shadow: 10px 10px 0 rgba(0,0,0,.75);
         img
             width: 200px;
             height: 200px;
