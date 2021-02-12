@@ -139,18 +139,25 @@ export default {
 
 <style lang="sass" scoped>
 #SectionThree
-  background: linear-gradient(180deg,#1a1514,#413561);
-  .character-bio-container
-    color: #fff;
-    text-align: left;
-    p
-      margin: 5px 0;
-      i
-        font-size: 0.8em;
-    .img-border
-      float: left;
-      margin-right: 20px;
-      img
-        width: 200px;
-        height: 200px;
+    background: linear-gradient(180deg,#1a1514,#413561);
+    .character-bio-container
+        color: #fff;
+        text-align: left;
+        p
+            margin: 5px 0;
+        i
+            font-size: 0.8em;
+        .img-border
+            border: 5px solid #fff;
+            box-shadow: 10px 10px 0 rgba(0,0,0,.75);
+            float: left;
+            margin-right: 20px;
+            @media screen and (max-width: 575px)
+                float: initial;
+                display: flex;
+                justify-content: center;
+                margin-bottom: 20px;
+        img
+            width: 200px;
+            height: 200px;
 </style>

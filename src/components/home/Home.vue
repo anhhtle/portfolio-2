@@ -5,21 +5,13 @@
     <!-- story -->
     <SectionTwo />
     <!-- choose your coder -->
-    <!--
     <SectionThree /> 
-    -->
     <!-- choose your stage -->
-    <!--
     <SectionFour /> 
-    -->
     <!-- fight image -->
-    <!--
-    <SectionFive /> 
-    -->
+    <SectionFive />
     <!-- projects -->
-    <!--
     <SectionSix @showErrorModal="show_error_modal = true;"/> 
-    -->
     
     <div class="contact-container" @click="show_contacts_modal = true;">
       <p>Contacts</p>

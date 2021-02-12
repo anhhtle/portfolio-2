@@ -9,7 +9,7 @@
                     <a href="https://www.linkedin.com/in/anh-ht-le/" target="_blank">LinkedIn</a>
                 </p>
                 <p>
-                    <a href="https://github.com/anhhtle" target="_blank">Github</a>
+                    <a href="https://github.com/ahtle" target="_blank">Github</a>
                 </p>
                 <p>
                     <a href="https://drive.google.com/file/d/0B7HUXC9DzzC1UVNDdjhDeWZzeTA/view?usp=sharing" target="_blank">Resume</a>

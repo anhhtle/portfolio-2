@@ -75,6 +75,25 @@ export default {
         },
         {
           status: 'Professional',
+          title: 't32 grant application',
+          description: 'tool to facilitate grant applications. Aggregate work and pulication of mentors and mentees to produce documents for NIH grants.',
+          site: '',
+          skills: ['vuejs', 'laravel', 'database'],
+          images: [
+            {
+                thumb: require('../../../assets/images/t32grant-01.png'),
+                src: require('../../../assets/images/t32grant-01.png'),
+                caption: '<h4>UI follow NIH submission requirements</h4>',
+            },
+            {
+                thumb: require('../../../assets/images/t32grant-02.png'),
+                src: require('../../../assets/images/t32grant-02.png'),
+                caption: '<h4>pull publication data from pubmed</h4>',
+            },
+          ]
+        },
+        {
+          status: 'Professional',
           title: 'stanford hiring portal',
           description: 'public faculty hiring site. internal applicant management/interview/status system',
           site: 'https://facultyapplication.stanford.edu',
@@ -83,7 +102,7 @@ export default {
             {
               thumb: require('../../../assets/images/domleanfa.png'),
               src: require('../../../assets/images/domleanfa.png'),
-              caption: '<h4>Fight!</h4>',
+              caption: '<h4>Public facing portal</h4>',
             },
           ]
         },
@@ -215,5 +234,7 @@ export default {
   #SectionSix
     background: linear-gradient(180deg,#1a1514,#413561);
     .project-container
-      margin: 0 100px;
+        margin: 0 100px;
+        @media screen and (max-width: 575px)
+            margin: 0;
 </style>

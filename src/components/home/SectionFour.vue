@@ -150,20 +150,27 @@ export default {
   #SectionFour
     background: linear-gradient(180deg,#413561,#3206b9);
     .flex-container
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      align-items: center;
-      .img-container
-        cursor: pointer;
-        margin: 10px;
-        img
-          width: 300px;
-          height: 170px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        @media screen and (max-width: 575px)
+            margin-bottom: 20px;
+        .img-container
+            display: contents;
+            img
+                cursor: pointer;
+                margin: 10px;
+                width: 300px;
+                height: 170px;
+                @media screen and (max-width: 575px)
+                    width: 47%;
+                    height: 86px;
+                    margin: 5px;
     .stage
-      font-size: 1.5em;
-      text-shadow: 5px 5px #000;
-      margin: 0;
+        font-size: 1.5em;
+        text-shadow: 5px 5px #000;
+        margin: 0;
     .date
-      font-size: 1.3em;
+        font-size: 1.3em;
 </style>

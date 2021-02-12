@@ -10,11 +10,13 @@ export default {
 
 <style lang="sass" scoped>
 #SectionFive
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 700px;
-  background-image: url(../../assets/images/fight.png);
-  background-size: cover;
-  image-rendering: pixelated;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 700px;
+    background-image: url(../../assets/images/fight.png);
+    background-size: cover;
+    image-rendering: pixelated;
+    @media screen and (max-width: 575px)
+        height: 140px;
 </style>
