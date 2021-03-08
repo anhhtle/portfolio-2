@@ -8,6 +8,7 @@
         :title="item.title"
         :description="item.description"
         :skills="item.skills"
+        :additional_skills="item.additional_skills"
         :status="item.status"
         :github="item.github"
         :site="item.site"
@@ -74,6 +75,22 @@ export default {
           ],
         },
         {
+          status: 'Personal',
+          title: 'Zoom Family Feud',
+          description: 'only version of the game family feud. Practice for Next.js, React Hooks, and Typescript.',
+          skills: ['react'],
+          additional_skills: ['nextjs', 'typescript'],
+          github: 'https://github.com/ahtle/zoom-family-feud',
+          site: 'https://zoom-family-feud.vercel.app/',
+          images: [
+            {
+              thumb: require('../../../assets/images/zoom-family-feud.png'),
+              src: require('../../../assets/images/zoom-family-feud.png'),
+              caption: '<h4>Survey says!</h4>',
+            },
+          ],
+        },
+        {
           status: 'Professional',
           title: 't32 grant application',
           description: 'tool to facilitate grant applications. Aggregate work and pulication of mentors and mentees to produce documents for NIH grants.',
@@ -111,6 +128,7 @@ export default {
           title: 'stanford department of medicine site',
           description: `Provide support and maintance for the largest department within the school of medicine. Also train new user in using the CMS; this site uses Adobe Experience Manager.`,
           site: 'https://medicine.stanford.edu/',
+          additional_skills: ['aem'],
           images: [
             {
               thumb: require('../../../assets/images/dom.png'),
@@ -122,7 +140,7 @@ export default {
         {
           status: 'Personal',
           title: 'founding speeches [not maintaining]',
-          description: 'Easily browse and view transcript of famous speeches. Use Watson Personality Insight to analyze the transcript based on: Big Five personality, Needs, and Values',
+          description: 'Easily browse and view transcript of famous speeches. Use Watson Personality Insight to analyze the transcript based on: Big Five personality, Needs, and Values.',
           skills: ['react', 'database'],
           github: 'https://github.com/ahtle/founding-speeches',
           site: 'https://founding-speeches.herokuapp.com/',

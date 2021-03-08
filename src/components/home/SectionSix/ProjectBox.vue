@@ -27,6 +27,12 @@
           :class="`font-awesome ${item}`" 
           :icon="item === 'database' ? item : [ 'fab', item ]" 
         />
+
+        <template v-for="(item) in additional_skills">
+            <img v-if="item === 'aem'" class="additional-skills" :key="item" src="../../../assets/images/aem.png" />
+            <img v-if="item === 'nextjs'" class="additional-skills" :key="item" src="../../../assets/images/nextjs.png" />
+            <img v-if="item === 'typescript'" class="additional-skills" :key="item" src="../../../assets/images/typescript.png" />
+        </template>
         
       </div>
     </div>
@@ -35,7 +41,7 @@
 
 <script>
     export default {
-        props: ['title', 'description', 'skills', 'status', 'github', 'site', 'images'],
+        props: ['title', 'description', 'skills', 'additional_skills', 'status', 'github', 'site', 'images'],
         data() {
             return {
             }
@@ -103,4 +109,7 @@
             color: #61dafb;
         .vuejs
             color: #4fc08d;
+        .additional-skills 
+            margin: 0 10px;
+            height: 24px;
 </style>
