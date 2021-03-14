@@ -31,6 +31,7 @@
         <template v-for="(item) in additional_skills">
             <img v-if="item === 'aem'" class="additional-skills" :key="item" src="../../../assets/images/aem.png" />
             <img v-if="item === 'nextjs'" class="additional-skills" :key="item" src="../../../assets/images/nextjs.png" />
+            <img v-if="item === 'tensorflow'" class="additional-skills" :key="item" src="../../../assets/images/tf-logo.png" />
             <img v-if="item === 'typescript'" class="additional-skills" :key="item" src="../../../assets/images/typescript.png" />
         </template>
         

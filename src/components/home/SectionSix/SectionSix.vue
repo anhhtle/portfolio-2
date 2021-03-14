@@ -40,8 +40,29 @@ export default {
 			element_visible: false,
 
 			lightbox_images: [],
-
 			projects: [
+				{
+					status: "Personal",
+					title: "React x Tensorflow Practice",
+					description:
+						"implement tensorflow's Object Detection and Image Classification models.",
+					skills: ["react", "tensorflow"],
+					additional_skills: ["tensorflow", "typescript"],
+					github: "https://github.com/ahtle/tensorflow-practice",
+					site: "https://ahtle.github.io/tensorflow-practice",
+					images: [
+						{
+							thumb: require("../../../assets/images/object-recognition.png"),
+							src: require("../../../assets/images/object-recognition.png"),
+							caption: "<h4>I am a person!</h4>",
+						},
+						{
+							thumb: require("../../../assets/images/image-classification.png"),
+							src: require("../../../assets/images/image-classification.png"),
+							caption: "<h4>So that's what it is!</h4>",
+						},
+					],
+				},
 				{
 					status: "Professional",
 					title: "stanford COVID Vaccine tracker",
